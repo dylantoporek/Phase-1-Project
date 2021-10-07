@@ -107,26 +107,17 @@ function calculateWinner(){
     //console.log(typeChart[playerPokeType])
 
 
+    if (cpuWins = playerPokeTypeArr.includes(cpuPokeType)){
+        return alert('YOU LOSE')
+    }
+    
+    if (playerWins = cpuPokeTypeArr.includes(playerPokeType)){
+        return alert('YOU WIN')
+    }
 
-    playerPokeTypeArr.forEach(element => {
-        if (element === cpuPokeType){
-            return alert('YOU LOSE')
-        }
-    }) 
-    
-    cpuPokeTypeArr.forEach(element => {
-        if (element === playerPokeType){
-            return alert('YOU WIN')
-        }
-        
-    })
-
-    
-    
-    
-    
-
-
+    if(playerWins === cpuWins){
+        return alert('NO WINNER, PLAY AGAIN!')
+    }
 }
 
 const typeChart = {

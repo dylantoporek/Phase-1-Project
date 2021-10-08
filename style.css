@@ -1,49 +1,100 @@
 body {
-    background-color: #F25757;
+    background-color: white;
     
 }
 
-#cpu {
+#cpuRandomizer{
     position: absolute;
-    width: 100px;
-    height: 25Spx;
+    width: 75px;
+    height: 75px;
     left: 1000px;
-    top: 100px;
+    top: 150px;
+    border-radius: 50%;
+    z-index: 1;
     background-color: rgb(173, 173, 173);
+}
+
+
+
+#randomizer{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 60px;
+    top: 75px;
+    border-radius: 50%;
+    background-color: rgb(255, 249, 249);
+    z-index: 1;
 }
 
 #player1 {
     position: absolute;
     width: 200px;
-    height: 100px;
-    left: 125px;
-    top: 100px;
-    background-color: white;
+    height: 75px;
+    left: 175px;
+    top: 75px;
+    border-radius: 5%;
+    background-color: rgb(255, 249, 249);
+    z-index: 1;
 }
+
+#label {
+    position: absolute;
+    left: 20px;
+    top: 1px;
+    z-index: 1;
+}
+
+
+
 
 #battle {
     position: absolute;
-    width: 100px;
-    height: 50px;
-    left: 550px;
-    top: 400px;
-    background-color: whitesmoke;
+    width: 75px;
+    height: 75px;
+    left: 650px;
+    top: 350px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
 }
 
 #displayPlayer1 {
     position: absolute;
     width: 150px;
     height: 150px;
-    left: 125px;
+    left: 200px;
     top: 475px;
+    z-index: 1;
+}
+
+#ellipse1 {
+    position: absolute;
+    width: 300px;
+    height: 75px;
+    border-radius: 50%;
+    left: 125px;
+    top: 575px;
+    background-color: rgba(104, 148, 231, 0.425);
 }
 
 #displayCPU {
     position: absolute;
     width: 150px;
     height: 150px;
-    left: 1000px;
+    left: 970px;
     top: 475px;
+    z-index: 1;
+}
+
+#ellipse2{
+    position: absolute;
+    width: 300px;
+    height: 75px;
+    border-radius: 50%;
+    left: 900px;
+    top: 575px;
+    background-color: rgba(228, 21, 200, 0.514);
 }
 
 #playerPokeDisplay {
@@ -56,7 +107,41 @@ body {
     height: 150px;
 }
 
-#cpuPoke{
+#cpuPoke { 
     width: 150px;
     height: 150px;
+}
+
+#pokeball1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    left: 613px;
+    top: 313px;
+    z-index: 1;
+}
+
+#pokeball2 {
+    position: absolute;
+    width: 1500px;
+    height: 30px;
+    top: 370px;
+    left: 0px;
+    background-color: black;
+}
+
+#pokeball3 {
+    position: absolute;
+    width: 1500px;
+    height: 370px;
+    background-color: rgba(236, 14, 14, 0.836);
+    left: 0px;
+    top: 0px;
+}
+
+#likeButton {
+    position: absolute;
+    z-index: 1;
 }

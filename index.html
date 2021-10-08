@@ -8,9 +8,9 @@
 
     <div id='player1' class='pokeChoice'>
       <form id='chooser'>
-        <label for='pokedexInput'>Choose Your Pokemon:</label><br>
+        <label for='pokedexInput' id='label'>Choose Your Pokemon:</label><br>
         <input type='text' id='pokedexInput' name='pokedexInput'>
-        <input type='submit' value='Submit'>
+        <input type='submit' id='submit' value='Submit'>
     </form>
     <button type='button' id='randomizer'>Random</button>
     </div>
@@ -21,9 +21,13 @@
       
     <button type="button" id='likeButton'>Like</button>
     <button type='button' id='battle'>Battle!</button>
-
-      <div id='displayPlayer1'></div>
-      <div id='displayCPU'></div>
+    <div id='displayPlayer1'></div>
+    <div id='displayCPU'></div>
+    <div id='ellipse1'></div>
+    <div id='ellipse2'></div>
+    <div id='pokeball1'></div>
+    <div id='pokeball2'></div>
+    <div id='pokeball3'></div>
     <script src="node.js"></script>
   </body>
 

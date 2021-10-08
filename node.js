@@ -115,24 +115,32 @@ function calculateWinner(){
 
 
     if (cpuWins = playerPokeTypeArr.includes(cpuPokeType)){
-        return alert(`YOU LOSE!: ${cpuPokeType} beats ${playerPokeType}`)
+        return alert(`You lose: ${cpuPokeType} beats ${playerPokeType}!`)
     }
     
     if (playerWins = cpuPokeTypeArr.includes(playerPokeType)){
-        return alert(`YOU WIN!: ${playerPokeType} beats ${cpuPokeType}`)
+        return alert(`You win: ${playerPokeType} beats ${cpuPokeType}!`)
     }
 
     if(playerWins === cpuWins){
-        alert('NO WINNER BY TYPE, LETS CHECK THEIR WEIGHTS!')
+        alert('No winner by type. Let\'s check their weights!')
         let playerWeight = document.querySelector("#playerWeight").innerHTML
         let cpuWeight = document.querySelector("#cpuWeight").innerHTML
 
-        if(playerWeight > cpuWeight){
-            return alert(`YOU WIN! ${playerWeight} > ${cpuWeight} `)
+        if(parseInt(playerWeight) > parseInt(cpuWeight)){
+            let cpuWKG = (cpuWeight / 10)
+            let playerWKG = (playerWeight / 10)
+            return alert(`You win: ${playerWKG} kg > ${cpuWKG} kg!`)
         }
 
-        if (playerWeight < cpuWeight){
-            return alert(`YOU LOSE! ${cpuWeight} > ${playerWeight}`)
+        if (parseInt(cpuWeight) > parseInt(playerWeight)){
+            let cpuWKG = (cpuWeight / 10)
+            let playerWKG = (playerWeight / 10)
+            return alert(`You lose: ${cpuWKG} kg > ${playerWKG} kg!`)
+        }
+
+        if (parseInt(cpuWeight) === parseInt(playerWeight)){
+            return alert('What are the odds? No winner by type or weight!')
         }
     }
 }

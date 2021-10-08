@@ -45,9 +45,12 @@ function renderPokeCPU(obj){
     let newPokeType = document.createElement('h4')
     newPokeType.setAttribute('id', 'cpuType')
     newPokeType.innerHTML = received.types['0'].type.name
+    let newPokeWeight = document.createElement('h3')
+    newPokeWeight.setAttribute('id', 'cpuWeight')
+    newPokeWeight.innerHTML = received.weight
+    newPoke.appendChild(newPokeWeight)
     newPoke.appendChild(newPokeType)
     newDisplay.appendChild(newPoke)
-    //newDisplay.appendChild(newPokeType)
     display.append(newDisplay)
 }
 
@@ -82,6 +85,10 @@ function renderPokePlayer(obj){
     let newPokeType = document.createElement('h4')
     newPokeType.setAttribute('id', 'playerType')
     newPokeType.innerHTML = received.types['0'].type.name
+    let newPokeWeight = document.createElement('h3')
+    newPokeWeight.setAttribute('id', 'playerWeight')
+    newPokeWeight.innerHTML = received.weight
+    newPoke.appendChild(newPokeWeight)
     newPoke.appendChild(newPokeType)
     newDisplay.appendChild(newPoke)
     display.appendChild(newDisplay)
@@ -108,15 +115,25 @@ function calculateWinner(){
 
 
     if (cpuWins = playerPokeTypeArr.includes(cpuPokeType)){
-        return alert('YOU LOSE')
+        return alert(`YOU LOSE!: ${cpuPokeType} beats ${playerPokeType}`)
     }
     
     if (playerWins = cpuPokeTypeArr.includes(playerPokeType)){
-        return alert('YOU WIN')
+        return alert(`YOU WIN!: ${playerPokeType} beats ${cpuPokeType}`)
     }
 
     if(playerWins === cpuWins){
-        return alert('NO WINNER, PLAY AGAIN!')
+        alert('NO WINNER BY TYPE, LETS CHECK THEIR WEIGHTS!')
+        let playerWeight = document.querySelector("#playerWeight").innerHTML
+        let cpuWeight = document.querySelector("#cpuWeight").innerHTML
+
+        if(playerWeight > cpuWeight){
+            return alert(`YOU WIN! ${playerWeight} > ${cpuWeight} `)
+        }
+
+        if (playerWeight < cpuWeight){
+            return alert(`YOU LOSE! ${cpuWeight} > ${playerWeight}`)
+        }
     }
 }
 

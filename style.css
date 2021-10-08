@@ -1,5 +1,10 @@
 body {
     background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     
 }
 
@@ -63,8 +68,8 @@ body {
     font-size: 30px;
     width: 100px;
     height: 100px;
-    left: 710px;
-    top: 342px;
+    left: 700px;
+    top: 332px;
     border-radius: 50%;
     background-color: white;
     z-index: 2;
@@ -154,8 +159,8 @@ body {
     height: 200px;
     border-radius: 50%;
     background-color: black;
-    left: 660px;
-    top: 293px;
+    left: 650px;
+    top: 283px;
     z-index: 1;
 }
 
@@ -163,8 +168,8 @@ body {
     position: absolute;
     width: 1500px;
     height: 30px;
-    top: 370px;
-    left: 0px;
+    top: 360px;
+    left: -10px;
     background-color: black;
 }
 
@@ -173,8 +178,8 @@ body {
     width: 1500px;
     height: 370px;
     background-color: rgba(236, 14, 14, 0.836);
-    left: 0px;
-    top: 0px;
+    left: -10px;
+    top: -10px;
 }
 
 #likeButton {

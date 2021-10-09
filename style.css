@@ -13,11 +13,13 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     width: 75px;
     height: 75px;
-    left: 1050px;
+    left: 1000px;
     top: 150px;
+    border-width: 2px;
+    border-color: black;
     border-radius: 50%;
     z-index: 1;
-    background-color: rgb(173, 173, 173);
+    background-color: whitesmoke;
 }
 
 
@@ -30,6 +32,8 @@ body {
     left: 350px;
     top: 150px;
     border-radius: 50%;
+    border-width: 2px;
+    border-color: black;
     background-color: rgb(255, 249, 249);
     z-index: 1;
 }
@@ -68,7 +72,7 @@ body {
     font-size: 30px;
     width: 100px;
     height: 100px;
-    left: 700px;
+    left: 663px;
     top: 332px;
     border-radius: 50%;
     background-color: white;
@@ -159,7 +163,7 @@ body {
     height: 200px;
     border-radius: 50%;
     background-color: black;
-    left: 650px;
+    left: 610px;
     top: 283px;
     z-index: 1;
 }
@@ -188,4 +192,51 @@ body {
     height: 35px;
     left: 1250px;
     z-index: 1;
+}
+
+#playerScoreLabel{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 2;
+    left: 660px;
+    top: 90px;
+
+}
+
+#playerScore {
+    position: absolute;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    left: 650px;
+    top: 120px;
+    z-index: 2;
+    text-align: center;
+}
+
+#cpuScore {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    left: 720px;
+    top: 120px;
+    z-index: 2;
+    text-align: center;
+}
+
+#scoreboardBack{
+    position: absolute;
+    width: 200px;
+    height: 110px;
+    left: 610px;
+    top: 80px;
+    z-index: 1;
+    background-color: black;
 }

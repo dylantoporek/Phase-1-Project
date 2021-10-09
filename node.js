@@ -104,7 +104,12 @@ function selector(pokemon){
 let battle = document.querySelector("#battle")
 battle.addEventListener('click', calculateWinner)
 
+let cpuScore = 0
+let playerScore = 0
+
 function calculateWinner(){
+    let playerScoreContainer = document.querySelector("#playerScore")
+    let cpuScoreContainer = document.querySelector("#cpuScore")
     let playerPokeType = document.querySelector("#playerType").innerHTML
     let cpuPokeType = document.querySelector("#cpuType").innerHTML
     let playerPokeTypeArr = typeChart[playerPokeType]
@@ -115,10 +120,14 @@ function calculateWinner(){
 
 
     if (cpuWins = playerPokeTypeArr.includes(cpuPokeType)){
+        cpuScore = cpuScore + 1
+        cpuScoreContainer.innerHTML = cpuScore
         return alert(`You lose: ${cpuPokeType} beats ${playerPokeType}!`)
     }
     
     if (playerWins = cpuPokeTypeArr.includes(playerPokeType)){
+        playerScore = playerScore + 1
+        playerScoreContainer.innerHTML = playerScore
         return alert(`You win: ${playerPokeType} beats ${cpuPokeType}!`)
     }
 
@@ -128,12 +137,16 @@ function calculateWinner(){
         let cpuWeight = document.querySelector("#cpuWeight").innerHTML
 
         if(parseInt(playerWeight) > parseInt(cpuWeight)){
+            playerScore = playerScore + 1
+            playerScoreContainer.innerHTML = playerScore
             let cpuWKG = (cpuWeight / 10)
             let playerWKG = (playerWeight / 10)
             return alert(`You win: ${playerWKG} kg > ${cpuWKG} kg!`)
         }
 
         if (parseInt(cpuWeight) > parseInt(playerWeight)){
+            cpuScore = cpuScore + 1
+            cpuScoreContainer.innerHTML = cpuScore
             let cpuWKG = (cpuWeight / 10)
             let playerWKG = (playerWeight / 10)
             return alert(`You lose: ${cpuWKG} kg > ${playerWKG} kg!`)

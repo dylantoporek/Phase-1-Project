@@ -148,6 +148,8 @@ function calculateWinner(){
         }
 
         if (parseInt(cpuWeight) === parseInt(playerWeight)){
+            document.querySelector("#displayPlayer1").innerHTML = ""
+            document.querySelector("#displayCPU").innerHTML = ""
             return alert('What are the odds? No winner by type or weight!')
         }
     }

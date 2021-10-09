@@ -72,7 +72,7 @@ body {
     font-size: 30px;
     width: 100px;
     height: 100px;
-    left: 663px;
+    left: 662px;
     top: 332px;
     border-radius: 50%;
     background-color: white;
@@ -125,14 +125,18 @@ body {
 #playerPoke {
     width: 150px;
     height: 150px;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
     
 }
+
 
 #playerPoke:hover{
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
-      
+    
+
 @keyframes shake {
     0% { transform: translate(2px, 2px) rotate(0deg); }
     10% { transform: translate(-2px, -4px) rotate(-1deg); }
@@ -150,6 +154,8 @@ body {
 #cpuPoke { 
     width: 150px;
     height: 150px;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
 }
 
 #cpuPoke:hover{
@@ -239,4 +245,14 @@ body {
     top: 80px;
     z-index: 1;
     background-color: black;
+}
+
+@keyframes bounce {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-15px);}
+}
+  
+@-webkit-keyframes bounce {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-15px);}
 }

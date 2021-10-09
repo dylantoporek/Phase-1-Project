@@ -22,10 +22,7 @@ function randomizeCPU(){
     fetch('https://pokeapi.co/api/v2/pokemon?limit=1200&offset=0')
     .then(res => res.json())
     .then(data => {
-        //console.log(data)
         let randomPoke = (data.results[Math.floor(Math.random() * data.results.length)])
-        //console.log(randomPoke)
-        //console.log(randomPoke.url)
         fetch(randomPoke.url)
         .then(res => res.json())
         .then(data => renderPokeCPU(data))
@@ -61,10 +58,7 @@ function randomizePlayer(){
     fetch('https://pokeapi.co/api/v2/pokemon?limit=1200&offset=0')
     .then(res => res.json())
     .then(data => {
-        //console.log(data)
         let randomPoke = (data.results[Math.floor(Math.random() * data.results.length)])
-        //console.log(randomPoke)
-        //console.log(randomPoke.url)
         fetch(randomPoke.url)
         .then(res => res.json())
         .then(data => renderPokePlayer(data))
@@ -114,9 +108,6 @@ function calculateWinner(){
     let cpuPokeType = document.querySelector("#cpuType").innerHTML
     let playerPokeTypeArr = typeChart[playerPokeType]
     let cpuPokeTypeArr = typeChart[cpuPokeType]
-    //console.log(playerPokeType)
-    //console.log(cpuPokeType)
-    //console.log(typeChart[playerPokeType])
 
 
     if (cpuWins = playerPokeTypeArr.includes(cpuPokeType)){

@@ -121,12 +121,14 @@ function calculateWinner(){
 
     if (cpuWins = playerPokeTypeArr.includes(cpuPokeType)){
         cpuScore = cpuScore + 1
+        document.querySelector("#displayPlayer1").innerHTML = ""
         cpuScoreContainer.innerHTML = cpuScore
         return alert(`You lose: ${cpuPokeType} beats ${playerPokeType}!`)
     }
     
     if (playerWins = cpuPokeTypeArr.includes(playerPokeType)){
         playerScore = playerScore + 1
+        document.querySelector("#displayCPU").innerHTML = ''
         playerScoreContainer.innerHTML = playerScore
         return alert(`You win: ${playerPokeType} beats ${cpuPokeType}!`)
     }
@@ -138,6 +140,7 @@ function calculateWinner(){
 
         if(parseInt(playerWeight) > parseInt(cpuWeight)){
             playerScore = playerScore + 1
+            document.querySelector("#displayCPU").innerHTML = ''
             playerScoreContainer.innerHTML = playerScore
             let cpuWKG = (cpuWeight / 10)
             let playerWKG = (playerWeight / 10)
@@ -146,6 +149,7 @@ function calculateWinner(){
 
         if (parseInt(cpuWeight) > parseInt(playerWeight)){
             cpuScore = cpuScore + 1
+            document.querySelector("#displayPlayer1").innerHTML = ""
             cpuScoreContainer.innerHTML = cpuScore
             let cpuWKG = (cpuWeight / 10)
             let playerWKG = (playerWeight / 10)

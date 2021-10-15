@@ -80,7 +80,7 @@ let cpuScore = 0
 let playerScore = 0
 
 function checkScore(){
-    const winningScore = 7
+    const winningScore = 3
     if (cpuScore >= winningScore){
     alert('You lose. Try again!')
         location.reload()

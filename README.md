@@ -8,6 +8,8 @@ Welcome to my phase 1 project. This is a simple Pokémon battler app.
 
 3. Click the battle button to find the winner!
 
+The first to win 3 rounds wins the match.
+
 Note: There must be a Pokémon chosen for both the player and the cpu to initiate a battle.
 
 The battle has two methods to find a victor: battle by type and battle by weight.
